@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultrakabin</title>
+<link href="css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="margin-top: 100px">
+<header>
+  <div class="container"> 
+    <!--Navagtion Begins-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light"><span class="branding_logo">Ultrakabin</span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item navlistitem active"><a href="index.html">Home</a></li>
+          <li class="nav-item dropdown navlistitem"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+              <div class="dropdownitem" aria-labelledby="navbarDropdown1"> <a class="dropdownitem" href="standardcabins.html">Standard Cabins</a> <a class="dropdownitem" href="modularbuildings.html">Modular Buildings</a> <a class="dropdownitem" href="antivandal.html">Anti-Vandal Units</a> <a class="dropdownitem" href="containers.html">Containers</a> <a class="dropdownitem" href="mobileunits.html">Mobile Units</a> <a class="dropdownitem" href="schoolbuildings.html">School Buildings</a> <a class="dropdownitem" href="groundhog.html">Ground Hog</a> <a class="dropdownitem" href="toiletunit.html">Toilet Units</a> </div>
+            </div>
+          </li>
+          <li class="navlistitem"><a href="#">About Us</a></li>
+          <li class="navlistitem"><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--Navagation ends--> 
+  </div>
+  <!--Container ends --> 
+</header>
+<!-- Header Ends -->
+
+<!--Container starts-->
+<div class="container"> 
+	  <!--Tab Links-->
+    <div class="tab">
+	  <button class="tablinks" onclick="openTab(event,'Information')" id="defaultOpen">Product Information</button>
+	  <button class="tablinks" onclick="openTab(event,'Photos')">Gallery</button>
+    </div>
+	  
+	  <!-- Tab Content-->
+    <div id = "Information" class="tabcontent">
+		<h4>Mobile Units:</h4><p>Ultrakabin offer a range of handy mobile units for use as roadside office and canteen facilities. These units meet all E.U. and Local Regulations regarding Loading, Brake and Lighting Systems.</p>
+
+	  
+	  	  <div class="standardlist">
+			<h5>Standard Features Include:</h5>
+		<ul>
+			<li>IFOR Williams Low Loading Trailer</li>
+			<li>Modern 1997 EU Full Regulation Hydraulic Auto-Reverse Braking System</li>
+			<li>Full Regulation Lighting System</li>
+			<li>Gas Fired Heaters and Cookers</li>
+			<li>Fully Steel Internal Finish</li>
+			<li>Aluminum Framed Windows</li>
+		</ul>
+		</div>
+<!--Tab Content 1 Ends-->
+</div>
+<!-- Container Ends-->
+</div> 
+<div class="container">	
+<div id="Photos" class="tabcontent">
+<!-- Container for the image gallery -->
+<div class="gallerycontainer">
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 2</div>
+      <img src="images/mobileunit/mobile.jpg" style="width:100%" alt="1">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 2</div>
+      <img src="images/mobileunit/mobile(1).jpg" style="width:100%" alt="2">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/mobileunit/mobile.jpg" style="width:100%" onclick="currentSlide(1)" alt="Mobile Unit">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/mobileunit/mobile(1).jpg" style="width:100%" onclick="currentSlide(2)" alt="Mobile Unit (1)">
+    </div>
+</div>
+</div> <!-- Tab 2 Ends-->
+</div>
+<!-- Container Ends--> 
+</div>
+<script>
+	
+/*Taken from W3 Schools*/	
+/*JavaScript for Tab Menu*/
+function openTab(evt, tabName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+	
+}
+ document.getElementById("defaultOpen").click();
+
+	
+/*Taken from W3 Schools*/
+/*Javascript for image gallery*/
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+		
+<!-- Footer Begins-->
+<footer>
+  <div class="container">
+    <div class="affiliates">
+	  <h5>Our Affiliates:</h5>
+      <a href="https://grange.ie/builders-providers/">Grange Building Providers</a> <br>
+      <a href="https://grange.ie/builders-providers/grange-electrical"> Grange Electrical Wholesalers</a> </div>
+    <h5>Follow us on:</h5>
+    <a href="https://www.instagram.com/ultrakabin/"><img src="images/logos/instagram_icon.png" alt="Instagram Logo"></a> <a href="https://www.facebook.com/Ultrakabin-115186988572900/"><img src="images/logos/facebook_icon.png" alt="Facebook Logo"></a> <br>
+  </div>
+</footer>
+<script src="js/jquery-3.3.1.min.js"></script> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.3.1.js"></script>
+</body>
+</html>
